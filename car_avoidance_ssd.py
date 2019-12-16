@@ -2,6 +2,8 @@ import cv2
 import numpy as np
 import imutils
 import dlib
+import AvoidanceDecision as AD
+# import DIP_avoidance.AvoidanceDecision as AD
 from pyimagesearch.utils import Conf
 from pyimagesearch.centroidtracker import CentroidTracker
 from imutils.video import FPS
@@ -64,6 +66,7 @@ while(True):
 	# if the frame dimensions are empty, set them
 	if W is None or H is None:
 		(H, W) = frame.shape[:2]
+
 
 	# initialize our list of bounding box rectangles returned by
 	# either (1) our object detector or (2) the correlation trackers
@@ -139,6 +142,9 @@ while(True):
 	# use the centroid tracker to associate the (1) old object
 	# centroids with (2) the newly computed object centroids
 	objects = ct.update(rects)
+
+	# Decide
+	AD.Decide(frame, objects)
 
 	# loop over the tracked objects
 	for (objectID, centroid) in objects.items():
