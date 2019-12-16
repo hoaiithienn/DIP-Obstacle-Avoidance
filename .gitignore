@@ -274,3 +274,8 @@ TSWLatexianTemp*
 
 # Makeindex log files
 *.lpz
+
+
+#large model
+models/yolo.h5
+models/yolov3_spp.h5
