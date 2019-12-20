@@ -1,0 +1,128 @@
+% This is a copy version from https://github.com/thanhhungqb/thesis-template
+% Please do not modified this project, when you want to start writing, make a clone of it for your own (Please read README.md)
+
+
+% TO COMPILE: F6 -> F11 -> F6 -> F6
+
+\documentclass[12pt,a4paper,oneside]{book} % twoside for draf
+
+%\usepackage{babel}
+\usepackage[unicode]{hyperref}  
+\usepackage[utf8]{vietnam}
+\usepackage[utf8]{inputenc}
+\DeclareUnicodeCharacter{2003}{ }% support older LaTeX versions
+\usepackage{tipa}
+\usepackage{amssymb}
+\usepackage{subcaption}
+\usepackage[justification=centering]{caption}
+\usepackage{booktabs}
+%\usepackage{mathptmx}	% same Time New Roman
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{styles/ipa}
+\usepackage{array}
+\newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\usepackage{fancyhdr}
+\usepackage{multirow}
+\usepackage{algorithm2e}
+\usepackage{float}
+\usepackage{styles/bkthesis}
+
+\usepackage{tabto}
+\usepackage[nottoc]{tocbibind}
+\usepackage{pdfpages}
+\usepackage{subcaption} 
+\usepackage{multirow}
+%\usepackage{svg}
+%\svgpath{{./svg/}}
+
+\usepackage{graphicx}
+\graphicspath{ {./figures/} }
+\setcounter{secnumdepth}{2}
+
+\crname{BÁO CÁO ĐỒ ÁN MÔN HỌC}
+\ctname{
+	NHẬN DẠNG VẬT CẢN \\ DI ĐỘNG TRONG VIDEO
+}
+\csSupervise{Thầy ĐẶNG NGUYÊN CHÂU}
+	
+\cstuname{
+	Lương Hoài Thiện \tabto{4.5cm}- 1513202 \par
+	Nguyễn Huỳnh Đức \tabto{4.5cm}- 1510797 \par
+	Hà Huy Dũng \tabto{4.5cm}- 1510551 \par
+	Trần Lê Đức Trung \tabto{4.5cm}- 1513746 \par
+}
+
+\cttime{12/2019}
+
+\cchapterAbbr{GIỚI THIỆU ĐỀ TÀI}
+
+\thesislayout
+
+\begin{document}
+%-	Bìa cứng - màu xanh dương, chữ mạ vàng (xem mẫu đính kèm)
+%-	Trang tên (tờ lót): chất liệu giấy, nội dung giống như bìa LV
+%-	Ở gáy LV: in nhan đề LV (có thể in tóm tắt nếu nhan đề quá dài), size 15 – 17
+%-	Phiếu Nhiệm vụ LV, chấm điểm Hướng dẫn & Phản biện (đã ký): nhận từ GVHD & GVPB sau khi bảo vệ (theo lịch hẹn).
+%-	Lời cam đoan
+%-	Lời cảm ơn/ Lời ngỏ
+%-	Tóm tắt LV
+%-	Mục lục
+%-	Danh mục, bảng biểu, hình ảnh, ... (nếu có)
+%-	Nội dung LV
+%-	Danh mục TL tham khảo
+%-	Phụ lục (nếu có)
+
+%%% Document introduction -----------------------------------
+\input{intro/00-cover.tex}
+\frontmatter
+\input{intro/01-index.tex}
+\input{intro/02-abstract-vi.tex}
+%\input{intro/03-abstract-en.tex}		
+\input{intro/04-list-abbreviations.tex}
+\input{intro/05-list-tables.tex}
+\input{intro/06-list-figures.tex}
+\input{intro/07-acknowledgement.tex}
+
+%%% Document main contents -----------------------------------
+\mainmatter
+
+\fancyhead{}  % Clears all page headers and footers
+\lhead{\fontsize{10}{12} \selectfont Nhận dạng vật cản di động trong video} 
+
+\lfoot{\fontsize{10}{12} \selectfont \leftmark}
+
+\rhead{\fontsize{10}{12} \selectfont GVHD: Đặng Nguyên Châu}
+\rfoot{\fontsize{10}{12} \selectfont SV: L.H.Thiện,N.H.Đức, \\ 
+H.H.Dũng, T.L.Đ.Trung}
+
+
+%\fancyfoot[positions]{footer}
+\renewcommand{\footrulewidth}{0.4pt}
+
+\pagestyle{fancy}  % Finally, use the "fancy" page style to implement the FancyHdr headers
+%
+
+
+\input{chapters/ch1_introduction.tex}
+\input{chapters/ch2_obstacles_detection.tex}
+\input{chapters/ch3_decision_making.tex}
+\input{chapters/ch4_results.tex}
+\input{chapters/ch5_conclusion.tex}
+
+
+
+%%% Document ending contents -----------------------------------
+\renewcommand\bibname{TÀI LIỆU THAM KHẢO}
+\nocite{*}
+\bibliography{references}\cleardoublepage
+\bibliographystyle{ieeetr}
+\newpage
+
+
+\end{document}
+
+
+
