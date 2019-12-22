@@ -1,0 +1,7 @@
+<launch>
+	<include ns="bridge5" file="$(find rosbridge_server)/launch/rosbridge_websocket.launch">
+		<arg name="port" value="9090" />
+	</include>
+        <node name="dip" pkg="dip" type="dip_node.py" output="screen" />
+</launch>
+
