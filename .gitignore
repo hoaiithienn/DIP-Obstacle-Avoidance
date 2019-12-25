@@ -282,3 +282,6 @@ models/yolov3_spp.h5
 
 # pdf tex report
 report/*.pdf
+
+# Python Bytecode
+*.pyc
