@@ -1,0 +1,165 @@
+\documentclass[10pt,conference,a4paper]{IEEEtran}
+%\documentclass[12pt,draftcls,twocolumn]{IEEEtran}
+\usepackage{ifpdf}
+%\usepackage{cite}
+
+% *** GRAPHICS RELATED PACKAGES ***
+%
+\ifCLASSINFOpdf
+  \usepackage[pdftex]{graphicx}
+  % declare the path(s) where your graphic files are
+  \graphicspath{{../pdf/}{../jpeg/}}
+  % and their extensions so you won't have to specify these with
+  % every instance of \includegraphics
+  \DeclareGraphicsExtensions{.pdf,.jpeg,.png}
+\else
+  % or other class option (dvipsone, dvipdf, if not using dvips). graphicx
+  % will default to the driver specified in the system graphics.cfg if no
+  % driver is specified.
+  \usepackage[dvips]{graphicx}
+  % declare the path(s) where your graphic files are
+  \graphicspath{{../eps/}}
+  % and their extensions so you won't have to specify these with
+  % every instance of \includegraphics
+  \DeclareGraphicsExtensions{.eps}
+  \fi
+%  \DeclareMathOperator{\vecOp}{\mathrm{vec}}
+%	\DeclareMathOperator{\tr}{\mathrm{tr}}
+%	\DeclareMathOperator{\E}{\mathbb{E}}
+%	\DeclareMathOperator{\var}{\mathbb{V}\mathrm{ar}}
+%	\DeclareMathOperator{\cov}{\mathrm{Cov}}
+%	\DeclareMathOperator{\sgn}{\mathrm{sgn}}
+%	\DeclareMathOperator{\etr}{\mathrm{etr}}
+%	\DeclareMathOperator{\re}{\mathfrak{Re}}
+%	\DeclareMathOperator{\im}{\mathfrak{Im}}
+%\documentclass[10pt,conference,a4paper,compsocconf]{IEEEtran}
+%\documentclass[11pt]{article}
+%\usepackage{graphicx}
+%\usepackage{amsmath,amssymb,hyperref,fancyhdr}%fancyhdr
+\usepackage{amsmath,amsxtra,amssymb,amsthm,latexsym,amscd,amsfonts}
+%\usepackage[utf8]{vietnam}
+\usepackage[utf8]{vntex}
+%\usepackage{fancyhdr}
+%\pagestyle{fancy}
+\renewcommand{\sectionmark}[1]{\markright{\MakeUppercase{#1}}{}}
+%\renewcommand{\headrulewidth}{0pt}
+\ifCLASSINFOpdf
+\usepackage[pdftex]{graphicx}
+\DeclareGraphicsExtensions{.pdf,.jpeg,.png,.jpg}
+\else
+\usepackage[dvips]{graphicx}
+\DeclareGraphicsExtensions{.eps}
+\fi
+\usepackage{array}
+\usepackage{epstopdf}
+%\usepackage[font=footnotesize]{subfig}
+%\hyphenation{op-tical net-works semi-conduc-tor}
+\usepackage{anysize}
+%\marginsize{2.4cm}{2.0cm}{3.8cm}{3.6cm}
+% Use other margin values if the pdf file does not fit the word template (left: 2.4cm, right: 2.0cm, top: 3.8cm, bottom: 3.6cm)
+\marginsize{2.4cm}{2.0cm}{3.2cm}{3.0cm}
+%\marginsize{2.4cm}{1.4cm}{2.4cm}{2cm}
+\usepackage{multicol}
+\usepackage{balance}
+
+\hyphenation{op-tical net-works semi-conduc-tor}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+%\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{proposition}{Bổ Đề}
+
+\makeatletter
+\def\ScaleIfNeeded{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+
+\begin{document}
+\columnsep=0.63cm
+%---Mathematical symbols ------------------------------------------------------
+\def\mathbi#1{\boldsymbol{#1}}
+\def\erfc{\:\mathrm{erfc}}
+\def\arg{\:\mathrm{arg}}
+\def\E{\:\mathrm{E}}
+\def\sinc{\:\mathrm{sinc}}
+\def\T{\mathrm{T}}
+\def\H{\mathrm{H}}
+\newcommand{\bigsize}{\fontsize{16pt}{20pt}\selectfont}
+
+%
+% paper title
+% can use linebreaks \\ within to get better formatting as desired
+\include{Abbr}
+\title{NHẬN DIỆN VẬT CẢN DI ĐỘNG TRONG VIDEO VÀ ỨNG DỤNG VÀO MÔ PHỎNG XE TỰ HÀNH}
+
+\author{
+\IEEEauthorblockN{
+Lương Hoài Thiện\IEEEauthorrefmark{1},
+Hà Huy Dũng\IEEEauthorrefmark{1},
+Nguyễn Huỳnh Đức\IEEEauthorrefmark{1},
+Trần Lê Đức Trung\IEEEauthorrefmark{1},
+} 
+\IEEEauthorblockA{\IEEEauthorrefmark{1} Trường Đại học Bách Khoa TP. Hồ Chí Minh\\
+		Email: \{1513202, 1510551, 1510797, 1513746\}@hcmut.edu.vn}
+}
+\maketitle
+
+\begin{abstract}
+%\boldmath 
+%%% ---------------------------- ABSTRACT ----------------------------
+
+
+
+
+%%% -------------------------- END ABSTRACT --------------------------
+\end{abstract}
+
+\begin{IEEEkeywords}
+Nhận diện vật thể di động, xử lý ảnh, xe tự hành, mạng học sâu
+\end{IEEEkeywords}
+\IEEEpeerreviewmaketitle
+%
+\section{GIỚI THIỆU}
+%%% ---------------------------- INTRODUCTION ----------------------------
+
+
+
+
+%%% -------------------------- END INTRODUCTION --------------------------
+
+
+%
+\section{MÔ HÌNH HỆ THỐNG}
+\label{Sec:MoHinhHeThong}
+%%% ---------------------------- ABSTRACT ----------------------------
+
+
+
+
+%%% -------------------------- END ABSTRACT --------------------------
+
+%
+\section{ĐÁNH GIÁ HIỆU NĂNG HỆ THỐNG}
+\label{Sec:DanhGiaHieuNangHeThong}
+%
+%%% ---------------------------- ABSTRACT ----------------------------
+
+
+
+
+%%% -------------------------- END ABSTRACT --------------------------
+%
+\section{KẾT QUẢ MÔ PHỎNG}
+\label{Sec:KetQuaMoPhong}
+%
+
+%
+\section{KẾT LUẬN}
+\label{Sec:KetLuan}
+%
+
+\bibliographystyle{IEEEtran}
+\balance
+\bibliography{reference}
+%
+\end{document}
+
+
