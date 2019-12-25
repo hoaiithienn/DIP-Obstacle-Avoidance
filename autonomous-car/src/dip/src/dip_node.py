@@ -18,6 +18,7 @@ from pyimagesearch.utils import Conf
 from pyimagesearch.centroidtracker import CentroidTracker
 
 from datetime import datetime
+import os
 
 class CarController:
 	def __init__(self):
@@ -71,8 +72,12 @@ class CarController:
 
 		# video recording
 		now = datetime.now()
-		current_time = now.strftime("%H:%M:%S")
-		self.outputvideo = cv2.VideoWriter('pictures/%s.avi'%(current_time),cv2.VideoWriter_fourcc(*'XVID'), 10, (320,240))
+		folderName = 'pictures/%s'%(now.strftime("%Y%m%d"))
+		if ~os.path.isdir(folderName):
+			os.mkdir(folderName)
+
+		current_time = now.strftime("%H_%M_%S")
+		self.outputvideo = cv2.VideoWriter('%s/%s.avi'%(folderName, current_time),cv2.VideoWriter_fourcc(*'XVID'), 10, (320,240))
 		# self.outputvideo = cv2.VideoWriter('pictures/%s.avi'%(current_time),-1, 10, (320,240))
 
 		# Subcribe to the camera image topics and set the appropriate callbacks
